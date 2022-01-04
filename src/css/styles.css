@@ -1,2 +1,294 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/TTNorms-Bold.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/TTNorms-Medium.woff2") format("woff2"); }
+
+@font-face {
+  font-family: "TTNorms";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/TTNorms-Regular.woff2") format("woff2"); }
+
+html,
+body,
+button,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  /* нулевая граница */
+  padding: 0;
+  /* нулевые отступы */
+  border: 0;
+  /* больше всего для картинок в IE6 */
+  outline: 0;
+  /* точечная граница вокруг ссылок в Firefox */
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
 body {
-  background-color: red; }
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none;
+  /* маркеры без кружочков */ }
+
+* {
+  box-sizing: border-box; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+:focus {
+  outline: 0;
+  /* Firefox выделяет рамкой из точек все ссылки при нажатии */ }
+
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+table {
+  border-collapse: collapse;
+  /* cellspacing="0" */
+  border-spacing: 0; }
+
+img {
+  width: 100%;
+  /* Упрощаем работу с изображениями */
+  display: block; }
+
+a {
+  text-decoration: none;
+  /* убирает подчеркивание текста */
+  color: #000; }
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font-family: inherit; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+html {
+  font-family: TTNorms, sans-serif;
+  font-style: normal;
+  font-size: 10px; }
+
+.conteiner {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7a425e 87.53%);
+  background-size: cover;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.hero__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  margin-top: 50px; }
+
+.hero__wrap-nav {
+  display: flex;
+  flex-direction: column; }
+
+.hero__wrap-switch-language {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px; }
+
+.switch-language {
+  display: inline-flex;
+  align-items: center; }
+
+.switch-name {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  color: #ffffff;
+  padding: 5px 6px;
+  border-radius: 8px; }
+
+.switch__input {
+  -webkit-appearance: none; }
+
+.switch__input:checked ~ .switch-name {
+  background-color: #f0145a; }
+
+.switch__input:hover ~ .switch-name {
+  background-color: #ededf7; }
+
+.hero__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%), url(../img/img-hero/logo.svg), url(../img/img-hero/frame.svg);
+  background-size: 100% 20vh, 82vh, 82vh;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative; }
+
+.logo-min {
+  width: 155px;
+  height: 62px; }
+
+.hero__facebook-logo {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items: center; }
+
+.hero__facebook-logo:hover path {
+  fill: #24a3ff; }
+
+.hero__copyright-adress {
+  display: inline-flex;
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.187;
+  color: #ffffff;
+  align-items: center; }
+
+.hero__copyright-tel {
+  display: inline-flex;
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 1.187;
+  color: #ffffff;
+  align-items: center; }
+
+.hero__copyright-tel::before,
+.hero__copyright-tel::after,
+.hero__copyright-adress::before {
+  content: "\25CF ";
+  color: inherit;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: normal;
+  font-size: 1rem; }
+
+.nav__list {
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  justify-content: end; }
+
+.nav__link {
+  font-size: 18px;
+  line-height: calc(21 / 18);
+  color: #ffffff; }
+
+.nav__link:hover {
+  color: #F0145A; }
+
+.hero__h1 {
+  display: block;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 1.184;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -150%); }
+
+.hero__arrow {
+  color: white;
+  margin-bottom: 20px; }
