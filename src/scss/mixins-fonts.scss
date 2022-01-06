@@ -1,0 +1,34 @@
+@mixin font-hero() {
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: (50 / 42);
+    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        background-clip: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+@mixin font-h2() {
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: (38 / 32);
+}
+@mixin font-h3() {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: (28 / 24);
+}
+@mixin font-h3caps() {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: (17 / 14);
+}
+@mixin font-h4() {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: (21 / 18);
+}
+@mixin font-p() {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: (26 / 18);
+}

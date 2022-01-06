@@ -30,19 +30,20 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
-    line-height: calc(14 / 12);
+    line-height: (14 / 12);
     color: #ffffff;
     padding: 5px 6px;
     border-radius: 8px;
 }
 .switch__input {
     -webkit-appearance: none;
-}
-.switch__input:checked ~ .switch-name {
-    background-color: #f0145a;
-}
-.switch__input:hover ~ .switch-name {
-    background-color: #ededf7;
+    &:checked ~ .switch-name {
+        background-color: #f0145a;
+    }
+    &:hover ~ .switch-name {
+        background-color: #ededf7;
+        cursor: pointer;
+    }
 }
 .hero__content {
     flex-grow: 1;
@@ -66,9 +67,9 @@
     width: 24px;
     height: 24px;
     align-items: center;
-}
-.hero__facebook-logo:hover path {
-    fill: #24a3ff;
+    &:hover path {
+        fill: #24a3ff;
+    }
 }
 .hero__copyright-adress {
     display: inline-flex;
@@ -104,11 +105,11 @@
 }
 .nav__link {
     font-size: 18px;
-    line-height: calc(21 / 18);
+    line-height: (21 / 18);
     color: #ffffff;
-}
-.nav__link:hover {
-    color: #F0145A;
+    &:hover {
+        color: #F0145A;
+    }
 }
 .hero__h1 {
     display: block;

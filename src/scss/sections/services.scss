@@ -1,0 +1,37 @@
+.services {
+    background-image: map-get($color-gradient, supersoft);
+    border-radius: 0px 0px 12px 12px;
+}
+.services-link {
+    @include font-h3caps;
+    color: #ffffff;
+    opacity: 0.5;
+    margin-bottom: 3px;
+}
+.services__title {
+    @include font-hero;
+    margin-bottom: 68px;
+}
+.services__card {
+    padding: 1px;
+}
+.services__img {
+    width: 92px;
+    margin-bottom: 20px;
+}
+.services__title-card {
+    @include font-h3;
+    color: map-get($color-active, regular);
+    margin-bottom: 15px;
+}
+.services__text-card {
+    @include font-p;
+    color: #ffffff;
+    margin-bottom: 58px;
+}
+.services__wrap-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 40px;
+}

@@ -99,17 +99,17 @@
             </div>
         </section>
         <!-- end hero -->
-        <!-- start experience -->
-        <section class="experience">
+        <!-- start services & experience-->
+        <section class="services">
             <div class="conteiner experience__conteiner">
                 <ul class="experience__list">
                     <li class="experience__item">
-                        <a href="#" class="experience__link">
+                        <a href="#" id="experience-active" class="experience__link">
                             Послідовні
                         </a>
                     </li>
                     <li class="experience__item">
-                        <a href="#" class="experience__link">
+                        <a href="#" id="experience-active" class="experience__link">
                             Клієнтоорієнтовані
                         </a>
                     </li>
@@ -120,14 +120,15 @@
                     </li>
                     <li class="experience__item">
                         <a href="#" class="experience__link">
-                            Бізнес-орієнтовані<br>Юристи
+                            Бізнес-орієнтовані<br>
+                            <span class="experience__link-span">юристи</span>
                         </a>
                     </li>
                 </ul>
                 <div class="experience__wrap-text">
-                    <h3>
+                    <h2 class="experience-h2 h2">
                         Перевертаємо уявлення про юридичні послуги
-                    </h3>
+                    </h2>
                     <p class="experience__text">
                         Консолідуючи багаторічний досвід і практику, юристи компанії
                         супроводжують складні проекти і
@@ -136,19 +137,16 @@
                     </p>
                 </div>
             </div>
-        </section>
-        <!-- end experience -->
-        <!-- start services -->
-        <section class="services">
+            <!-- end experience -->
             <div class="conteiner">
-                <a href="#" class="section-nav">послуги &rsaquo;</a>
-                <h2 class="title">Що ми вміємо робити краще за інших?</h2>
+                <a href="#" class="services-link">послуги &rsaquo;</a>
+                <h2 class="services__title">Що ми вміємо робити краще за інших?</h2>
                 <ul class="services__wrap-cards">
                     <li class="services__card">
                         <img class="services__img" src="img/img-services/basket.svg" alt="services image basket">
-                        <h4 class="services__title-card">
+                        <h3 class="services__title-card">
                             IT та електронна комерція
-                        </h4>
+                        </h3>
                         <p class="services__text-card">
                             Нескінчений потік договорів, податкові питання, трудові відносини, корпоративні папери —
                             юридична робота відволікає вас від ведення бізнесу. Але роботи не так вже й багато, щоб
@@ -157,9 +155,9 @@
                     </li>
                     <li class="services__card">
                         <img class="services__img" src="img/img-services/briefcase.svg" alt="services image briefcase">
-                        <h4 class="services__title-card">
+                        <h3 class="services__title-card">
                             Комплексний щоденний юридичний супровід
-                        </h4>
+                        </h3>
                         <p class="services__text-card">
                             До того ж, з часом робота стане однотипною і нецікавою для штатного юриста. А ще ми добре
                             знаємо, як важко в Україні знайти хорошого кандидата з досвідом у сфері інформаційних
@@ -168,9 +166,9 @@
                     </li>
                     <li class="services__card">
                         <img class="services__img" src="img/img-services/structure.svg" alt="services image structure">
-                        <h4 class="services__title-card">
+                        <h3 class="services__title-card">
                             Структуризація корпоративних відносин
-                        </h4>
+                        </h3>
                         <p class="services__text-card">
                             Замість просто надавати юридичні послуги, ми закріпимо юриста або цілу команду, які
                             впишуться в повсякденне життя вашої компанії.
@@ -178,9 +176,9 @@
                     </li>
                     <li class="services__card">
                         <img class="services__img" src="img/img-services/arms.svg" alt="services image arms">
-                        <h4 class="services__title-card">
+                        <h3 class="services__title-card">
                             Побудовa договірних відносин
-                        </h4>
+                        </h3>
                         <p class="services__text-card">
                             Раз на тиждень, чи тиждень на місяць у вас під боком є ваш власний юрист. Будь-хто в
                             компанії може впіймати його біля кавоварки і просто поговорити про поточні справи замість
@@ -189,9 +187,9 @@
                     </li>
                     <li class="services__card">
                         <img class="services__img" src="img/img-services/shield.svg" alt="services image shield">
-                        <h4 class="services__title-card">
+                        <h3 class="services__title-card">
                             Захист бізнесу, інтелектуальної власності
-                        </h4>
+                        </h3>
                         <p class="services__text-card">
                             А весь інший час він працюватиме над новими різноплановими проектами, тому вже точно не
                             зупиниться в професійному розвитку. Так чи інакше, на вас працюватиме весь Axon Partners
@@ -200,9 +198,9 @@
                     </li>
                     <li class="services__card">
                         <img class="services__img" src="img/img-services/hammer.svg" alt="services image hammer">
-                        <h4 class="services__title-card">
+                        <h3 class="services__title-card">
                             Судове представництво
-                        </h4>
+                        </h3>
                         <p class="services__text-card">
                             Невелика компанія, середнього розміру, чи вже лідер ринку? Локальний бізнес або
                             транснаціональна компанія? Маєте власний юридичний відділ, чи ні?
@@ -437,6 +435,10 @@
         </footer>
         <!-- end footer -->
     </main>
+    <!-- auto focus -->
+    <script>
+        document.getElementById("experience-active").focus();
+    </script>
 </body>
 
 </html>

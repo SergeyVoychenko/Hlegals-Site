@@ -1,7 +1,14 @@
 @import "mixins";
-@import "variables";
+@import "../scss/mixins-fonts.scss";
+
+@import "variables-colors";
+
 @import "components";
+
 @import "fonts";
 @import "reset";
 @import "general";
+
 @import "../scss/sections/hero.scss";
+@import "../scss/sections/experience.scss";
+@import "../scss/sections/services.scss";
