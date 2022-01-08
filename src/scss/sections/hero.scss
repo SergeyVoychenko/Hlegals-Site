@@ -27,6 +27,7 @@
     align-items: center;
 }
 .switch-name {
+    display: inline-block;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
@@ -34,15 +35,16 @@
     color: #ffffff;
     padding: 5px 6px;
     border-radius: 8px;
+    transition: 0.5s;
 }
 .switch__input {
     -webkit-appearance: none;
-    &:checked ~ .switch-name {
-        background-color: #f0145a;
-    }
     &:hover ~ .switch-name {
         background-color: #ededf7;
         cursor: pointer;
+    }
+    &:checked ~ .switch-name {
+        background-color: $color-accent;
     }
 }
 .hero__content {
@@ -68,7 +70,7 @@
     height: 24px;
     align-items: center;
     &:hover path {
-        fill: #24a3ff;
+        fill: map-get($color-active, regular);
     }
 }
 .hero__copyright-adress {
@@ -107,8 +109,9 @@
     font-size: 18px;
     line-height: (21 / 18);
     color: #ffffff;
+    transition: 0.5s;
     &:hover {
-        color: #F0145A;
+        color: $color-accent;
     }
 }
 .hero__h1 {

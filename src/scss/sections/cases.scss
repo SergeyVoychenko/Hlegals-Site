@@ -1,0 +1,112 @@
+.cases__text {
+    visibility: hidden;
+    opacity: 0;
+    grid-column: 1 / span 5;
+    background-color: map-get($color-grey, bg-alt);
+    margin: 1.5px 0;
+    position: absolute;
+    z-index: -1;
+}
+.cases__item1 {
+    display: grid;
+    grid-template-columns: 24.242fr 8.56fr 25.757fr 8.636fr 32.8fr;
+    grid-template-rows: 8.948fr 31.083fr;
+    grid-template-areas:
+        "tl  tl   a   a   b "
+        " c   c   a   a   b ";
+    column-gap: 3px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    background-color: transparent;
+}
+.cases__item2 {
+    display: grid;
+    grid-template-columns: 24.242fr 8.56fr 25.757fr 8.636fr 32.8fr;
+    grid-template-rows: 31.083fr;
+    grid-template-areas: " d   f   f   e   e ";
+    column-gap: 3px;
+    overflow: hidden;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    background-color: transparent;
+    margin-bottom: 30px;
+}
+.cases__card-txt {
+    display: none;
+}
+.cases__card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    background-color: map-get($color-grey, bg);
+    margin: 1.5px 0;
+    &:nth-child(1) {
+        grid-area: tl;
+    }
+    &:nth-child(2) {
+        grid-area: c;
+    }
+    &:nth-child(3) {
+        grid-area: a;
+    }
+    &:nth-child(4) {
+        grid-area: b;
+    }
+    &:not(.nothover):hover,
+    &:not(.nothover):focus {
+        background-color: map-get($color-grey, bg-alt);
+    }
+    &:focus ~ .cases__text {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+    }
+}
+.cases__card2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    background-color: map-get($color-grey, bg);
+    margin: 1.5px 0;
+    &:nth-child(1) {
+        grid-area: d;
+    }
+    &:nth-child(2) {
+        grid-area: f;
+    }
+    &:nth-child(3) {
+        grid-area: e;
+    }
+    &:not(.nothover):hover,
+    &:not(.nothover):focus {
+        background-color: map-get($color-grey, bg-alt);
+    }
+    &:focus ~ .cases__text {
+        visibility: visible;
+        opacity: 1;
+        position: static;
+    }
+}
+
+.cases__title-h3caps {
+    @include font-h3caps;
+    color: $color-accent;
+    margin: 20px;
+    text-transform: uppercase;
+}
+.cases__title-h3 {
+    @include font-h3;
+    color: map-get($color-main, soft);
+    margin: 20px 20px 0 20px;
+}
+.cases__copy {
+    @include font-p;
+    color: map-get($color-grey, text);
+    padding: 20px;
+}
+.cases__card-title {
+    margin-bottom: 3px;
+}

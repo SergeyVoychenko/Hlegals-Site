@@ -1,0 +1,68 @@
+.shadow-1 {
+    margin: 0 20px;
+    height: 10px;
+    background: #cacadb;
+    border-radius: 0px 0px 12px 12px;
+}
+.shadow-2 {
+    margin: 0 40px 40px;
+    height: 10px;
+    background: #e7e7f2;
+    border-radius: 0px 0px 12px 12px;
+}
+.team__card {
+    height: 500px;
+    margin: 0 0 20px;
+    display: grid;
+    grid-template-columns: 413px 1fr;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.team__wrap-img {
+    overflow: hidden;
+}
+.team__content {
+    padding: 40px;
+    background: #f5f5fa;
+}
+.team__link {
+    @include font-h3caps;
+    color: map-get($color-active, regular);
+    margin-bottom: 3px;
+}
+.team__title {
+    @include font-hero;
+    margin-bottom: 20px;
+}
+.team__name {
+    @include font-h4;
+    margin-bottom: 5px;
+    color: map-get($color-grey, text);
+}
+.team__position {
+    @include font-p;
+    color: map-get($color-grey, text);
+}
+.slider-pagination {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+.slider-pagination__bg {
+    display: inline-block;
+    background-color: rgba(36, 163, 255, .2);
+    padding: 8px;
+    border-radius: 50%;
+    transform: translateX(-90%);
+    transition: 0.5s;
+}
+.slider-pagination__input {
+    -webkit-appearance: none;
+    &:hover ~ .slider-pagination__bg {
+        background-color: rgba(36, 163, 255, .6);
+        cursor: pointer;
+    }
+    &:checked ~ .slider-pagination__bg {
+        background-color: rgba(36, 163, 255, 1);
+    }
+}
