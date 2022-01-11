@@ -1,4 +1,30 @@
 .services {
+    padding-bottom: 20px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: calc(100% - 40px);
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background: #cacadb;
+        left: 20px;
+        bottom: 10px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(100% - 80px);
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background: #e7e7f2;
+        left: 40px;
+        bottom: 0;
+    }
+}
+.services--wrap {
     background-image: map-get($color-gradient, supersoft);
     border-radius: 0px 0px 12px 12px;
 }
@@ -7,6 +33,11 @@
     color: #ffffff;
     opacity: 0.5;
     margin-bottom: 3px;
+    &:hover {
+        color: $color-accent;
+        opacity: 1;
+        transition: all .5s;
+    }
 }
 .services__title {
     @include font-hero;
@@ -19,11 +50,19 @@
     width: 92px;
     margin-bottom: 20px;
 }
+.services__card-link {
+    display: inline-block;
+    &:hover > .services__title-card {
+        color: $color-accent;
+    }
+}
 .services__title-card {
     @include font-h3;
     color: map-get($color-active, regular);
     margin-bottom: 15px;
+    transition: all .5s;
 }
+
 .services__text-card {
     @include font-p;
     color: #ffffff;

@@ -342,6 +342,30 @@ html {
   color: #ffffff; }
 
 .services {
+  padding-bottom: 20px;
+  position: relative; }
+  .services::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% - 40px);
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background: #cacadb;
+    left: 20px;
+    bottom: 10px; }
+  .services::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: calc(100% - 80px);
+    height: 10px;
+    border-radius: 0 0 12px 12px;
+    background: #e7e7f2;
+    left: 40px;
+    bottom: 0; }
+
+.services--wrap {
   background-image: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
   border-radius: 0px 0px 12px 12px; }
 
@@ -352,6 +376,10 @@ html {
   color: #ffffff;
   opacity: 0.5;
   margin-bottom: 3px; }
+  .services-link:hover {
+    color: #f0145a;
+    opacity: 1;
+    transition: all .5s; }
 
 .services__title {
   font-weight: 700;
@@ -369,12 +397,18 @@ html {
   width: 92px;
   margin-bottom: 20px; }
 
+.services__card-link {
+  display: inline-block; }
+  .services__card-link:hover > .services__title-card {
+    color: #f0145a; }
+
 .services__title-card {
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 1.16667;
   color: #24a3ff;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  transition: all .5s; }
 
 .services__text-card {
   font-weight: 400;
@@ -389,21 +423,9 @@ html {
   grid-template-rows: auto;
   column-gap: 40px; }
 
-.shadow-1 {
-  margin: 0 20px;
-  height: 10px;
-  background: #cacadb;
-  border-radius: 0px 0px 12px 12px; }
-
-.shadow-2 {
-  margin: 0 40px 40px;
-  height: 10px;
-  background: #e7e7f2;
-  border-radius: 0px 0px 12px 12px; }
-
 .team__card {
   height: 500px;
-  margin: 0 0 20px;
+  margin: 40px 0 20px;
   display: grid;
   grid-template-columns: 413px 1fr;
   border-radius: 12px;
@@ -610,8 +632,46 @@ html {
   height: 120px; }
 
 .client__logo {
-  width: 62%; }
+  width: 62%;
+  transition: all 0.5s; }
+  .client__logo:hover {
+    width: 70%; }
+
+.client__link {
+  height: 120px; }
 
 .client__link--hillel {
-  background-color: #1c4280;
-  height: 120px; }
+  background-color: #1c4280; }
+
+.client__link--wannabiz {
+  background: #143646; }
+
+.client__link--tapgerine {
+  background: #F48B30; }
+
+.client__link--3dlook {
+  background: #9E4DC3; }
+
+.client__link--orangear {
+  background: #FD9339; }
+
+.client__link--adtelligent {
+  background: #E2E2E4; }
+
+.client__link--clickky {
+  background: #C71C36; }
+
+.client__link--eco-leasing {
+  background: #DCF3F9; }
+
+.client__link--infa-tek {
+  background: #EAEAEA; }
+
+.client__link--citi-park {
+  background: #282240; }
+
+.client__link--art-print {
+  background: #1D4568; }
+
+.client__link--ultimate {
+  background: #000000; }
