@@ -1,0 +1,30 @@
+.clients__title-h3caps {
+    text-align: center;
+    @include font-h3caps;
+    color: map-get($color-main, active);
+    margin: 30px;
+    text-transform: uppercase;
+}
+.clients__list {
+    display: grid;
+    grid-template-columns: repeat(4, 0.25fr);
+    grid-template-rows: repeat(3, 120px);
+}
+// .clients__item {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+.client__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+}
+.client__logo {
+    width: 62%;
+}
+.client__link--hillel {
+    background-color: #1c4280;
+    height: 120px;
+}

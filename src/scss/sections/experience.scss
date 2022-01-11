@@ -17,16 +17,15 @@
     color: #b3b3ba;
     border-right: 4px solid #b3b3ba;
     padding-right: 40px;
-    transition: 0.5s;
+    transition: all 0.5s;
     &:hover,
     &:focus {
-        background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
-        background-clip: ilinear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+        background: map-get($color-gradient, redtext);
+        background-clip: map-get($color-gradient, redtext);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        border-color: #F0145A;
+        color: transparent;
+        border-right-color: #F0145A;
     }
-    
 }
 .experience__link-span {
     display: flex;

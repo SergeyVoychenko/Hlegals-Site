@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
 }
-.cases__item1 {
+.cases__item-top {
     display: grid;
     grid-template-columns: 24.242fr 8.56fr 25.757fr 8.636fr 32.8fr;
     grid-template-rows: 8.948fr 31.083fr;
@@ -12,17 +12,17 @@
     column-gap: 3px;
     overflow: hidden;
     border-radius: 12px 12px 0 0;
-    background-color: transparent;
+    background-color: white;
     order: 1;
     &:focus-within ~ .cases__wrap-text {
         margin: 1.5px 0;
         visibility: visible;
         opacity: 1;
         margin: 1.5px 0;
-        height: inherit;
+        max-height: 1000px;
     }
 }
-.cases__item2 {
+.cases__item-bottom {
     display: grid;
     grid-template-columns: 24.242fr 8.56fr 25.757fr 8.636fr 32.8fr;
     grid-template-rows: 31.083fr;
@@ -30,7 +30,7 @@
     column-gap: 3px;
     overflow: hidden;
     border-radius: 0 0 12px 12px;
-    background-color: transparent;
+    background-color: white;
     margin-bottom: 30px;
     order: 3;
     &:focus-within ~ .cases__wrap-text {
@@ -38,30 +38,37 @@
         visibility: visible;
         opacity: 1;
         margin: 1.5px 0;
-        height: inherit;
+        z-index: auto;
+        max-height: 1000px;
     }
 }
 .cases__wrap-text {
+    transform: all 1s;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: map-get($color-grey, bg-alt);
     visibility: hidden;
-    opacity: 0;
+    opacity: 1;
     order: 2;
-    height: 0.1px;
+    max-height: 0px;
     margin: 0;
+    position: relative;
+    z-index: -1;
+    transition: all 1s;
 }
-.cases__card-txt {
-    display: none;
-}
-.cases__card1 {
+.cases__card {
     display: flex;
     flex-direction: column;
     justify-content: end;
     width: 100%;
     background-color: map-get($color-grey, bg);
     margin: 1.5px 0;
+}
+.cases__card-txt {
+    display: none;
+}
+.cases__item-top > .cases__card {
     &:nth-child(1) {
         grid-area: tl;
     }
@@ -74,18 +81,12 @@
     &:nth-child(4) {
         grid-area: b;
     }
-    &:not(.nothover):hover,
-    &:not(.nothover):focus {
+    &:not(.cases__card--nothover):hover,
+    &:not(.cases__card--nothover):focus {
         background-color: map-get($color-grey, bg-alt);
     }
 }
-.cases__card2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 100%;
-    background-color: map-get($color-grey, bg);
-    margin: 1.5px 0;
+.cases__item-bottom > .cases__card {
     &:nth-child(1) {
         grid-area: d;
     }
@@ -100,7 +101,6 @@
         background-color: map-get($color-grey, bg-alt);
     }
 }
-
 .cases__title-h3caps {
     @include font-h3caps;
     color: $color-accent;
@@ -121,6 +121,6 @@
     @include font-p;
     color: black;
     padding: 40px 0;
-    padding-left: calc((100vw - 85%) - 40px);
-    padding-right: calc((100vw - 85%) - 40px);
+    padding-left: calc(15% - 40px);
+    padding-right: calc(15% - 40px);
 }
