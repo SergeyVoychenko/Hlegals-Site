@@ -17,6 +17,11 @@
     @include font-h3caps;
     color: map-get($color-active, regular);
     margin-bottom: 3px;
+    &:hover {
+        color: $color-accent;
+        opacity: 1;
+        transition: all .5s;
+    }
 }
 .team__title {
     @include font-hero;

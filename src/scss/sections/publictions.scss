@@ -1,0 +1,89 @@
+.publictions {
+    background-color: map-get($color-grey, bg);
+}
+.publictions__conteiner {
+    position: relative;
+    height: 850px;
+    overflow: hidden;
+}
+.publictions__section-nav {
+    display: inline-block;
+    @include font-h3caps;
+    color: map-get($color-active, regular);
+    margin-top: 40px;
+    margin-bottom: 3px;
+    &:hover {
+        color: $color-accent;
+        opacity: 1;
+        transition: all 0.5s;
+    }
+}
+.publictions__title-h2 {
+    @include font-hero;
+    margin-bottom: 40px;
+}
+.publictions__frame-items {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    height: 1000px;
+    overflow: hidden;
+}
+.publictions__frame {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #ffffff;
+    &:first-child .publictions__frame-img {
+        display: none;
+    }
+    width: 31.5%;
+    // position: relative;
+    margin-bottom: 40px;
+    // &::before {
+    //     counter-increment: items;
+    //     content: counter(items);
+    // }
+    &:nth-of-type(3n + 1) {
+        order: 1;
+    }
+    &:nth-of-type(3n + 2) {
+        order: 2;
+    }
+    &:nth-of-type(3n) {
+        order: 3;
+    }
+}
+.publications__frame-wrap-content {
+    margin: 20px;
+}
+.publictions__frame-title {
+    @include font-h4;
+    color: map-get($color-active, regular);
+    margin-bottom: 10px;
+}
+.publictions__data {
+    @include font-p;
+    color: map-get($color-grey, text);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: (14 / 12);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #e6e6f0;
+}
+.publictions__text {
+    @include font-p;
+    font-size: 1.6rem;
+    line-height: (22 / 16);
+    color: black;
+}
+.publictions__conteiner-overlay {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #f5f5fa 86.5%);
+    background-size: cover;
+    border-bottom: 4px solid #e6e6f0;
+}
