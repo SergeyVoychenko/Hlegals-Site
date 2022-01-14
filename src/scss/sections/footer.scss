@@ -1,0 +1,76 @@
+.footer {
+    background-color: map-get($color-grey, bg);
+}
+.footer__conteiner {
+    padding: 34px 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__wrap-copyright-adress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+}
+.footer__wrap-copyright-logo {
+    display: flex;
+    align-items: center;
+}
+.footer__copy {
+    @include font-copy();
+    color: map-get($color-grey, text);
+}
+.footer__copyright-adress {
+    display: inline-flex;
+    @include font-copy();
+    font-weight: 500;
+    color: map-get($color-main, regular);
+    margin-right: 20px;
+}
+.footer__copyright-adress-link {
+    display: inline-flex;
+    @include font-copy();
+    font-weight: 500;
+    text-transform: uppercase;
+    color: map-get($color-active, regular);
+    transition: all 0.3s;
+    &::before {
+        @include dot();
+        color: map-get($color-grey, text);
+        margin: 0 10px;
+    }
+    &:hover {
+        color: $color-accent;
+    }
+}
+.footer__copyright-tel {
+    display: inline-flex;
+    @include font-copy();
+    font-weight: 700;
+    color: map-get($color-main, regular);
+    &::before {
+        @include dot();
+        color: map-get($color-grey, text);
+        margin: 0 10px;
+    }
+}
+.footer__copyright-mail {
+    display: inline-flex;
+    @include font-copy();
+    font-weight: 700;
+    color: map-get($color-active, regular);
+    transition: all 0.3s;
+    &::before {
+        @include dot();
+        color: map-get($color-grey, text);
+        margin: 0 10px;
+    }
+    &:hover {
+        color: $color-accent;
+    }
+}
+.footer__facebook-logo {
+    transition: all 0.3s;
+    &:hover path {
+        fill: $color-accent;
+    }
+}

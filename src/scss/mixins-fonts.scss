@@ -22,7 +22,7 @@
     line-height: (17 / 14);
 }
 @mixin font-h4() {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.8rem;
     line-height: (21 / 18);
 }
@@ -30,4 +30,9 @@
     font-weight: 400;
     font-size: 1.8rem;
     line-height: (26 / 18);
+}
+@mixin font-copy() {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: (18.88 / 16);
 }

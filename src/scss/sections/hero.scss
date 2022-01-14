@@ -65,39 +65,27 @@
     height: 62px;
 }
 .hero__facebook-logo {
-    display: inline-flex;
     width: 24px;
     height: 24px;
-    align-items: center;
     &:hover path {
         fill: map-get($color-active, regular);
     }
 }
 .hero__copyright-adress {
     display: inline-flex;
-    font-weight: normal;
-    font-size: 1.6rem;
-    line-height: 1.187;
+    @include font-copy();
     color: #ffffff;
-    align-items: center;
 }
 .hero__copyright-tel {
     display: inline-flex;
+    @include font-copy();
     font-weight: bold;
-    font-size: 1.6rem;
-    line-height: 1.187;
     color: #ffffff;
-    align-items: center;
 }
 .hero__copyright-tel::before,
 .hero__copyright-tel::after,
 .hero__copyright-adress::before {
-    content: "\25CF ";
-    color: inherit;
-    margin-right: 5px;
-    margin-left: 5px;
-    font-weight: normal;
-    font-size: 1rem;
+    @include dot();
 }
 .nav__list {
     display: flex;
@@ -115,16 +103,15 @@
     }
 }
 .hero__h1 {
-    display: block;
+    display: inline-block;
     font-weight: normal;
     font-size: 38px;
     line-height: 1.184;
     text-align: center;
     color: #ffffff;
     position: absolute;
-    left: 50%;
     top: 50%;
-    transform: translate(-50%, -150%);
+    transform: translate(0, -150%);
 }
 .hero__arrow {
     color: white;
