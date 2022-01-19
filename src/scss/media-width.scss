@@ -1,0 +1,35 @@
+@mixin tablet-1315() {
+    @media (max-width: 1315px) {
+        @content;
+    }
+}
+@mixin tablet-1024() {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin tablet-970() {
+    @media (max-width: 970px) {
+        @content;
+    }
+}
+@mixin tablet-850() {
+    @media (max-width: 850px) {
+        @content;
+    }
+}
+@mixin mobile-768() {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile-760() {
+    @media (max-width: 760px) {
+        @content;
+    }
+}
+@mixin mobile-550() {
+    @media (max-width: 550px) {
+        @content;
+    }
+}

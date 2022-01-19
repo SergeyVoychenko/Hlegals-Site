@@ -55,35 +55,36 @@
                         </a>
 
                     </div>
-                    <div class="hero__nav">
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    о нас
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    послуги
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    команда
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    публікації
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#" class="nav__link">
-                                    контакти
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <button class="hero__burger-menu" aria-label="show menu">
+                        <span class="menu-stik"></span>
+                    </button>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                о нас
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                послуги
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                команда
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                публікації
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">
+                                контакти
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="hero__content">
@@ -103,29 +104,37 @@
         <section class="services">
             <div class="services--wrap">
                 <div class="conteiner experience__conteiner">
-                    <ul class="experience__list">
-                        <li class="experience__item">
-                            <a href="#" id="experience-active" class="experience__link">
+                    <div class="experience__list">
+                        <label class="experience__item">
+                            <input checked type="radio" name="switch-experience" class="experience__item-input">
+                            <span class="experience__link">
                                 Послідовні
-                            </a>
-                        </li>
-                        <li class="experience__item">
-                            <a href="#" id="experience-active" class="experience__link">
+                            </span>
+                            <span class="experience__link-slider"></span>
+                        </label>
+                        <label class="experience__item">
+                            <input type="radio" name="switch-experience" class="experience__item-input">
+                            <span class="experience__link">
                                 Клієнтоорієнтовані
-                            </a>
-                        </li>
-                        <li class="experience__item">
-                            <a href="#" class="experience__link">
+                            </span>
+                            <span class="experience__link-slider"></span>
+                        </label>
+                        <label class="experience__item">
+                            <input type="radio" name="switch-experience" class="experience__item-input">
+                            <span class="experience__link">
                                 Інноваційні
-                            </a>
-                        </li>
-                        <li class="experience__item">
-                            <a href="#" class="experience__link">
-                                Бізнес-орієнтовані<br>
+                            </span>
+                            <span class="experience__link-slider"></span>
+                        </label>
+                        <label class="experience__item">
+                            <input type="radio" name="switch-experience" class="experience__item-input">
+                            <span class="experience__link">
+                                Бізнес-орієнтовані
                                 <span class="experience__link-span">юристи</span>
-                            </a>
-                        </li>
-                    </ul>
+                            </span>
+                            <span class="experience__link-slider"></span>
+                        </label>
+                    </div>
                     <div class="experience__wrap-text">
                         <h2 class="experience-h2">
                             Перевертаємо уявлення про юридичні послуги
@@ -252,15 +261,15 @@
                 </div>
                 <div class="slider-pagination">
                     <label class="slider-pagination__item">
-                        <input checked type="radio" name="switch" class="slider-pagination__input">
+                        <input checked type="radio" name="switch-slider" class="slider-pagination__input">
                         <span class="slider-pagination__bg"></span>
                     </label>
                     <label class="slider-pagination__item">
-                        <input type="radio" name="switch" class="slider-pagination__input">
+                        <input type="radio" name="switch-slider" class="slider-pagination__input">
                         <span class="slider-pagination__bg"></span>
                     </label>
                     <label class="slider-pagination__item">
-                        <input type="radio" name="switch" class="slider-pagination__input">
+                        <input type="radio" name="switch-slider" class="slider-pagination__input">
                         <span class="slider-pagination__bg"></span>
                     </label>
                 </div>
@@ -555,14 +564,14 @@
     <script>
         // при загрузке страници сразу прыгает на фокус, не удобно.
         //    document.getElementById("experience-active").focus();
-        let i = 0
-        window.addEventListener('scroll', function () {
-            for (; i < 1; i++) {
-                console.log(i);
-                document.getElementById("experience-active").focus();
-            }
+        // let i = 0
+        // window.addEventListener('scroll', function () {
+        //     for (; i < 1; i++) {
+        //         console.log(i);
+        //         document.getElementById("experience-active").focus();
+        //     }
 
-        });
+        // });
     </script>
 </body>
 

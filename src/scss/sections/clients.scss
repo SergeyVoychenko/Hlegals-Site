@@ -7,8 +7,16 @@
 }
 .clients__list {
     display: grid;
-    grid-template-columns: repeat(4, 0.25fr);
-    grid-template-rows: repeat(3, 120px);
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: repeat(3, 8.33vw);
+    @include mobile-768() {
+        grid-template-columns: repeat(3, 33vw);
+        grid-template-rows: repeat(4, 12vw);
+    }
+    @include mobile-550() {
+        grid-template-columns: repeat(2, 50vw);
+        grid-template-rows: repeat(6, 19vw);
+    }
 }
 .client__link {
     display: flex;

@@ -22,3 +22,9 @@ $color-gradient: (
     supersoft: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%),
     redtext: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%),
 );
+@mixin color-hero() {
+    background: map-get($color-gradient, redtext);
+        background-clip: map-get($color-gradient, redtext);
+        -webkit-background-clip: text;
+        color: transparent;
+}

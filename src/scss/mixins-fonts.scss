@@ -2,19 +2,29 @@
     font-weight: 700;
     font-size: 4.2rem;
     line-height: (50 / 42);
-    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include tablet-970() {
+        font-size: 3.8rem;
+    }
+    @include mobile-768() {
+        font-size: 3.2rem;
+    }
 }
+
 @mixin font-h2() {
     font-weight: 500;
     font-size: 3.2rem;
     line-height: (38 / 32);
+    @include mobile-768() {
+        font-size: 2.2rem;
+    }
 }
 @mixin font-h3() {
     font-weight: 500;
     font-size: 2.4rem;
     line-height: (28 / 24);
+    @include mobile-768() {
+        font-size: 1.8rem;
+    }
 }
 @mixin font-h3caps() {
     font-weight: 700;
@@ -30,6 +40,9 @@
     font-weight: 400;
     font-size: 1.8rem;
     line-height: (26 / 18);
+    @include mobile-768() {
+        font-size: 1.6rem;
+    }
 }
 @mixin font-copy() {
     font-weight: 400;
