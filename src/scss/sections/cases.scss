@@ -21,6 +21,10 @@
         margin: 1.5px 0;
         max-height: 1000px;
     }
+    @include mobile-760() {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .cases__item-bottom {
     display: grid;
@@ -40,9 +44,12 @@
         margin: 1.5px 0;
         max-height: 1000px;
     }
+    @include mobile-760() {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .cases__wrap-text {
-    transform: all 1s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +61,10 @@
     margin: 0;
     position: relative;
     z-index: -1;
-    transition: all 1s;
+    transition: all 1s ease-out;
+    @include mobile-760() {
+        display: none;
+    }
 }
 .cases__card {
     display: flex;
@@ -63,9 +73,48 @@
     width: 100%;
     background-color: map-get($color-grey, bg);
     margin: 1.5px 0;
+    position: relative;
+    &:hover > .cases__card-txt {
+        visibility: visible;
+        opacity: 1;
+        max-height: 100%;
+        padding: 20px 20px 72px 20px;
+        transition: all 0.5s ease-out;
+        border-top: 3px solid white;
+    }
 }
 .cases__card-txt {
     display: none;
+    @include mobile-760() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        margin: 0;
+        transition: all 0.5s ease-out;
+        &:hover {
+            opacity: 0;
+        }
+        &::after {
+            content: url('data:image/svg+xml,\
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175">\
+            <path d="M360.731 229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z" fill="%2324A3FF"/>\
+            </svg>');
+            transform: rotate(-90deg);
+            background-color: map-get($color-grey, bg);
+            display: block;
+            padding: 5px;
+            border-radius: 50%;
+            height: 22px;
+            width: 22px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
 }
 .cases__item-top > .cases__card {
     &:nth-child(1) {
@@ -115,6 +164,9 @@
     @include font-p;
     color: map-get($color-grey, text);
     padding: 20px;
+    @include mobile-550() {
+        padding-top: 10px;
+    }
 }
 .cases__text {
     @include font-p;
@@ -122,4 +174,7 @@
     padding: 40px 0;
     padding-left: calc(15% - 40px);
     padding-right: calc(15% - 40px);
+    @include mobile-760() {
+        padding: 0;
+    }
 }
